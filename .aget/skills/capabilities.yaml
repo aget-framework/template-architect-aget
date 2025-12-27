@@ -1,0 +1,38 @@
+# D4: SKILLS - Capability Declarations
+# Template: template-architect-aget
+# Version: 3.0.0
+
+capabilities:
+  core:
+    - id: capability-architecture-design
+      description: Design system architectures
+      scope: system_design
+
+    - id: capability-trade-off-analysis
+      description: Analyze and document trade-offs
+      scope: design_decisions
+
+    - id: capability-technical-leadership
+      description: Guide technical direction
+      scope: team_guidance
+
+    - id: capability-pattern-application
+      description: Apply architectural patterns
+      scope: system_design
+
+  governance:
+    - id: capability-governance-balanced
+      description: Balanced governance for design work
+
+    - id: capability-session-protocols
+      description: Session management patterns
+
+    - id: capability-evolution-tracking
+      description: Learning capture and application
+
+  specialized:
+    - id: capability-constraint-analysis
+      description: Identify and balance constraints
+
+    - id: capability-evolution-planning
+      description: Plan for system evolution

@@ -1,0 +1,31 @@
+# D4: SKILLS - A-SDLC Phase Mapping
+# Template: template-architect-aget
+# Version: 3.0.0
+
+asdlc_phases:
+  primary:
+    - phase: 2
+      name: Design
+      activities:
+        - Architecture design
+        - Trade-off analysis
+        - Pattern selection
+        - Technical guidance
+      intensity: high
+
+  secondary:
+    - phase: 1
+      name: Specification
+      activities:
+        - Feasibility assessment
+        - Constraint identification
+      intensity: medium
+
+    - phase: 3
+      name: Implementation
+      activities:
+        - Technical guidance
+        - Design clarification
+      intensity: medium
+
+  cross_cutting: []

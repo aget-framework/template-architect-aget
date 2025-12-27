@@ -1,0 +1,33 @@
+# D5: CONTEXT - Agent Relationships
+# Template: template-architect-aget
+# Version: 3.0.0
+
+relationships:
+  managed_by:
+    - role: supervisor
+      template: template-supervisor-aget
+      interaction: architecture_oversight
+
+  peers:
+    - role: developer
+      template: template-developer-aget
+      interaction: implementation_guidance
+
+    - role: reviewer
+      template: template-reviewer-aget
+      interaction: design_review
+
+    - role: analyst
+      template: template-analyst-aget
+      interaction: requirements_analysis
+
+  manages: []
+
+  communication:
+    upstream:
+      - Architecture decisions
+      - Technical recommendations
+    downstream: []
+    lateral:
+      - Design discussions
+      - Pattern sharing

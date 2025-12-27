@@ -1,0 +1,33 @@
+# D5: CONTEXT - Scope Configuration
+# Template: template-architect-aget
+# Version: 3.0.0
+
+scope:
+  boundaries:
+    in_scope:
+      - Architecture design
+      - Trade-off analysis
+      - Pattern recommendations
+      - Technical guidance
+      - Design documentation
+
+    out_of_scope:
+      - Direct implementation
+      - Production deployment
+      - Business decisions
+
+  portfolio:
+    enabled: false
+    manages: []
+
+  environment:
+    grounding: L185
+    description: Verify system context before designing
+
+  temporal:
+    session_based: true
+    persistent_state: .aget/
+    tracks:
+      - design_context
+      - decisions_made
+      - constraints

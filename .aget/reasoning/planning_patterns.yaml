@@ -1,0 +1,35 @@
+# D3: REASONING - Planning Patterns
+# Template: template-architect-aget
+# Version: 3.0.0
+
+planning:
+  approach: holistic
+  style: constraint_driven
+
+  patterns:
+    architecture_design:
+      steps:
+        - Gather requirements and constraints
+        - Identify architectural drivers
+        - Generate design options
+        - Analyze trade-offs
+        - Document decision
+        - Guide implementation
+      governance: evidence-first (L289)
+
+    design_review:
+      steps:
+        - Understand proposed design
+        - Evaluate against principles
+        - Identify concerns
+        - Provide guidance
+      governance: constructive_feedback
+
+  verification:
+    required:
+      - Trade-offs documented
+      - Constraints considered
+      - Evolution path viable
+    recommended:
+      - Peer review
+      - Prototype validation
