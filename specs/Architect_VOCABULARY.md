@@ -1,11 +1,13 @@
 # Architect Domain Vocabulary
 
-**Version**: 1.0.0
+**Version**: 1.1.0
 **Status**: Active
 **Owner**: template-architect-aget
 **Created**: 2026-01-10
+**Updated**: 2026-01-11
 **Scope**: Template vocabulary (DRIVES instance behavior per L481)
 **Archetype**: Architect
+**Template**: VOCABULARY_TEMPLATE_v3.3
 
 ---
 
@@ -90,6 +92,37 @@ Design_Decision:
   skos:broader: Architect_Core_Concepts
   skos:inScheme: Architect_Vocabulary
 ```
+
+---
+
+## Concept Relationships
+
+```yaml
+relationships:
+  hierarchical:
+    - parent: Architect_Core_Concepts
+      children: [Architecture, Component, Interface, Quality_Attribute, Design_Decision]
+
+  associative:
+    - subject: Architecture
+      predicate: skos:related
+      object: Component
+    - subject: Design_Decision
+      predicate: skos:related
+      object: Quality_Attribute
+```
+
+---
+
+## EKO Cross-References
+
+Per AGET_EXECUTABLE_KNOWLEDGE_SPEC.md:
+
+| Vocabulary Term | EKO Term | Relationship |
+|-----------------|----------|--------------|
+| Architecture | EKO:System_Structure | skos:exactMatch |
+| Design_Decision | EKO:Decision_Record | skos:closeMatch |
+| Quality_Attribute | EKO:Quality_Requirement | skos:broadMatch |
 
 ---
 
