@@ -8,7 +8,7 @@ template:
   name: template-architect-aget
   archetype: Architect
   description: Design template for system architecture and trade-off analysis
-  version: 3.0.0
+  version: 3.3.0
   created: "2025-12-27"
   author: private-aget-framework-AGET
   inherits_from: template-developer-aget
