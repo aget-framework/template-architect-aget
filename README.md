@@ -1,83 +1,129 @@
-# AGET Architect Template
+# Template: Architect Agent
 
-> **System design and architecture template**
+> Design systems and analyze trade-offs with architectural reasoning
 
-Part of the [AGET Framework](https://github.com/aget-framework) v3.5.0.
+**Version**: v3.5.0 | **Archetype**: Architect | **Skills**: 2 specialized + 13 universal
 
-## Archetype
+---
 
-**Architect** - Design sustainable system architectures that balance constraints.
+## Why Architect?
 
-- **Extends**: developer
-- **Governance**: Balanced
-- **Primary A-SDLC Phases**: 2 (Design)
+The Architect archetype brings **systematic design thinking** to system planning. Unlike ad-hoc design discussions, architect agents provide:
 
-## Key Capabilities
+- **Structured design** — Decompose systems into components with clear responsibilities
+- **Trade-off analysis** — Evaluate competing quality attributes with explicit reasoning
+- **Decision documentation** — Record architectural decisions with context and rationale
 
-- Architecture design and documentation
-- Trade-off analysis between competing concerns
-- Technical leadership and guidance
-- System integration planning
+**For evaluators**: If you need an AI that can reason about system design, evaluate architectural options, and document decisions for posterity, the Architect archetype provides structured design support.
 
-## Inviolable
+---
 
-```
-INV-ARC-001: shall NOT approve Architecture WITHOUT Documenting_Trade-offs
-```
+## Skills
+
+Architect agents come with **2 archetype-specific skills** plus 13 universal AGET skills.
+
+### Archetype Skills
+
+| Skill | Description |
+|-------|-------------|
+| **aget-design-architecture** | Design system architecture including components, relationships, and patterns. Addresses quality attributes and produces architectural artifacts. |
+| **aget-assess-tradeoffs** | Analyze trade-offs between competing concerns. Classifies decisions as one-way/two-way doors and provides structured recommendations. |
+
+### Universal Skills
+
+All AGET agents include session management, knowledge capture, and health monitoring:
+
+- `aget-wake-up` / `aget-wind-down` — Session lifecycle
+- `aget-create-project` / `aget-review-project` — Project management
+- `aget-record-lesson` / `aget-capture-observation` — Learning capture
+- `aget-check-health` / `aget-check-kb` / `aget-check-evolution` — Health monitoring
+- `aget-propose-skill` / `aget-create-skill` — Skill development
+- `aget-save-state` / `aget-file-issue` — State and issue management
+
+---
+
+## Ontology
+
+Architect agents use a **formal vocabulary** of 7 concepts organized into 3 clusters:
+
+| Cluster | Concepts |
+|---------|----------|
+| **System Design** | Architecture, Component, Pattern |
+| **Decision Making** | Decision, ADR (Architecture Decision Record) |
+| **Trade-off Analysis** | Trade_off, Quality_Attribute |
+
+This vocabulary enables precise communication about architectural decisions.
+
+See: [`ontology/ONTOLOGY_architect.yaml`](ontology/ONTOLOGY_architect.yaml)
+
+---
 
 ## Quick Start
 
-1. Clone this template
-2. Run instantiation script (see [Getting Started](docs/GETTING_STARTED.md))
-3. Configure for your architecture domain
+```bash
+# 1. Clone the template
+git clone https://github.com/aget-framework/template-architect-aget.git my-architect-agent
+cd my-architect-agent
+
+# 2. Configure identity
+# Edit .aget/version.json:
+#   "agent_name": "my-architect-agent"
+#   "domain": "your-domain"
+
+# 3. Verify setup
+python3 -m pytest tests/ -v
+# Expected: All tests passing
+```
+
+### Try the Skills
+
+```bash
+# In Claude Code CLI
+/aget-design-architecture  # Create system design
+/aget-assess-tradeoffs     # Analyze competing options
+```
 
 ---
 
-## Specification
+## What Makes Architect Different
+
+| Aspect | Ad-hoc Design | Architect Agent |
+|--------|---------------|-----------------|
+| **System decomposition** | Informal discussion | Structured component analysis |
+| **Trade-offs** | Implicit preferences | Explicit quality attribute evaluation |
+| **Decisions** | Lost in chat | ADRs with context and rationale |
+| **Reversibility** | Assumed | One-way vs. two-way door classification |
+
+---
+
+## Framework Specification
 
 | Attribute | Value |
 |-----------|-------|
-| **Governed By** | [AGET_TEMPLATE_SPEC v3.1](https://github.com/aget-framework/aget/blob/main/specs/AGET_TEMPLATE_SPEC.md) |
-| **Foundation** | [WORKER_TEMPLATE_SPEC v1.0](https://github.com/aget-framework/aget/blob/main/specs/WORKER_TEMPLATE_SPEC_v1.0.yaml) |
+| **Framework** | [AGET v3.5.0](https://github.com/aget-framework/aget) |
 | **Archetype** | Architect |
-| **Extends** | Developer |
-| **Manifest Version** | 3.0 |
-| **Contract Tests** | 8 tests |
-
-### Key Capabilities
-
-| ID | Capability | Pattern |
-|----|------------|---------|
-| CAP-001 | Wake Protocol | event-driven |
-| CAP-009 | Wind Down Protocol | event-driven |
-| CAP-020 | Version Configuration | ubiquitous |
-| CAP-028 | Project Plan Pattern | event-driven |
-
-Validate compliance: `pytest tests/ -v`
-
-See: [Full specification](https://github.com/aget-framework/aget/tree/main/specs)
+| **Skills** | 15 total (2 archetype + 13 universal) |
+| **Ontology** | 7 concepts, 3 clusters |
+| **License** | Apache 2.0 |
 
 ---
 
-## Structure
+## Learn More
 
-```
-template-architect-aget/
-├── manifest.yaml          # Template configuration
-├── governance/            # Charter, Mission, Scope
-├── tests/                 # Contract tests
-└── .aget/                 # 5D Composition Architecture
-    ├── persona/           # D1: Identity
-    ├── memory/            # D2: Knowledge
-    ├── reasoning/         # D3: Decision-making
-    ├── skills/            # D4: Capabilities
-    └── context/           # D5: Relationships
-```
-
-## License
-
-Apache License 2.0 - See [LICENSE](LICENSE)
+- **[AGET Framework](https://github.com/aget-framework/aget)** — Core framework documentation
+- **[Archetype Guide](https://github.com/aget-framework/aget/blob/main/docs/ARCHETYPE_GUIDE.md)** — All 12 archetypes explained
+- **[Getting Started](https://github.com/aget-framework/aget/blob/main/docs/GETTING_STARTED.md)** — Full onboarding guide
 
 ---
 
-*AGET Framework - AI discovers patterns, you describe intent*
+## Related Archetypes
+
+| Archetype | Best For |
+|-----------|----------|
+| **[Developer](https://github.com/aget-framework/template-developer-aget)** | Implementation and code quality |
+| **[Spec-Engineer](https://github.com/aget-framework/template-spec-engineer-aget)** | Requirements and specifications |
+| **[Reviewer](https://github.com/aget-framework/template-reviewer-aget)** | Quality assurance and feedback |
+
+---
+
+**AGET Framework** | Apache 2.0 | [Issues](https://github.com/aget-framework/template-architect-aget/issues)
