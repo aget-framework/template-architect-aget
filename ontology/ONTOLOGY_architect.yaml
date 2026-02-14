@@ -1,0 +1,285 @@
+# ONTOLOGY: Architect Archetype v1.0
+# SKOS-aligned concept definitions for architecture design and trade-off analysis
+#
+# Archetype: architect
+# Created: 2026-02-14
+# Author: private-aget-framework-AGET
+# Format: SKOS-inspired YAML (aget-framework convention)
+# Concepts: 7
+# Project: ARC-001 (Archetype Customization v3.5)
+
+apiVersion: aget.framework/v1
+kind: OntologySpec
+metadata:
+  name: architect-archetype-ontology
+  version: 1.0.0
+  created: 2026-02-14
+  author: private-aget-framework-AGET
+  archetype: architect
+  description: >
+    Formal vocabulary for architect archetype agents. Defines concepts for
+    architecture design, decision documentation, and trade-off analysis.
+  extends: ONTOLOGY_personal_ai_systems_v1.0.yaml
+
+# ============================================================================
+# CONCEPT SCHEME
+# ============================================================================
+
+conceptScheme:
+  uri: aget:ontology/architect
+  prefLabel: Architect Archetype Ontology
+  definition: >
+    A vocabulary for describing architect agent capabilities including
+    architecture design, decision recording, and trade-off evaluation.
+  hasTopConcept:
+    - aget:archetype/architect/Architecture
+    - aget:archetype/architect/Decision
+    - aget:archetype/architect/Trade_off
+  relatedScheme:
+    - aget:ontology/personal-ai-systems
+
+# ============================================================================
+# CONCEPTS
+# ============================================================================
+
+concepts:
+
+  # --------------------------------------------------------------------------
+  # Concept: Architecture
+  # --------------------------------------------------------------------------
+  - id: ARC-001
+    uri: aget:archetype/architect/Architecture
+    prefLabel: Architecture
+    altLabel:
+      - System_Architecture
+      - Design
+      - Structure
+    definition: >
+      The fundamental organization of a system, including components,
+      their relationships, and the principles governing design and evolution.
+    scopeNote: >
+      Architecture balances quality attributes (performance, security,
+      maintainability) against constraints (cost, time, technology).
+    theoreticalBasis:
+      primary: Software Architecture
+      source: IEEE 1471
+      reference: https://en.wikipedia.org/wiki/IEEE_1471
+    broader: null
+    narrower:
+      - aget:archetype/architect/Component
+    related:
+      - aget:archetype/architect/Decision
+      - aget:archetype/architect/Quality_Attribute
+    inScheme: aget:ontology/architect
+    cluster: Architecture Design
+
+  # --------------------------------------------------------------------------
+  # Concept: Component
+  # --------------------------------------------------------------------------
+  - id: ARC-002
+    uri: aget:archetype/architect/Component
+    prefLabel: Component
+    altLabel:
+      - Module
+      - Service
+      - Subsystem
+    definition: >
+      A modular, deployable, and replaceable part of a system that
+      encapsulates its implementation and exposes interfaces.
+    scopeNote: >
+      Components have clear boundaries and responsibilities. Coupling
+      between components affects maintainability and evolution.
+    theoreticalBasis:
+      primary: Component-Based Software Engineering
+      source: Szyperski
+    broader: aget:archetype/architect/Architecture
+    narrower: null
+    related:
+      - aget:archetype/architect/Interface
+    inScheme: aget:ontology/architect
+    cluster: Architecture Design
+
+  # --------------------------------------------------------------------------
+  # Concept: Decision
+  # --------------------------------------------------------------------------
+  - id: ARC-003
+    uri: aget:archetype/architect/Decision
+    prefLabel: Decision
+    altLabel:
+      - Architecture_Decision
+      - ADR
+      - Design_Decision
+    definition: >
+      A choice made during architecture design that has significant
+      impact on the system. Decisions should be documented with rationale.
+    scopeNote: >
+      AGET: Architecture Decision Records (ADRs) capture decisions.
+      Decisions are often irreversible or expensive to change.
+    theoreticalBasis:
+      primary: Architecture Decision Records
+      source: Michael Nygard
+      reference: https://adr.github.io/
+    broader: null
+    narrower: null
+    related:
+      - aget:archetype/architect/Architecture
+      - aget:archetype/architect/Trade_off
+    example:
+      - "ADR-001: AGET as conversation layer only"
+      - "ADR-004: Three-tier degradation"
+    inScheme: aget:ontology/architect
+    cluster: Decision Making
+
+  # --------------------------------------------------------------------------
+  # Concept: Trade_off
+  # --------------------------------------------------------------------------
+  - id: ARC-004
+    uri: aget:archetype/architect/Trade_off
+    prefLabel: Trade_off
+    altLabel:
+      - Trade_off_Analysis
+      - Balance
+      - Compromise
+    definition: >
+      The balance between competing concerns where improving one
+      aspect negatively impacts another. Architecture involves
+      conscious trade-off decisions.
+    scopeNote: >
+      Common trade-offs: performance vs maintainability, flexibility vs
+      simplicity, consistency vs availability.
+    theoreticalBasis:
+      primary: ATAM
+      source: SEI Architecture Tradeoff Analysis Method
+      reference: https://en.wikipedia.org/wiki/Architecture_tradeoff_analysis_method
+    broader: null
+    narrower: null
+    related:
+      - aget:archetype/architect/Decision
+      - aget:archetype/architect/Quality_Attribute
+    inScheme: aget:ontology/architect
+    cluster: Decision Making
+
+  # --------------------------------------------------------------------------
+  # Concept: Quality_Attribute
+  # --------------------------------------------------------------------------
+  - id: ARC-005
+    uri: aget:archetype/architect/Quality_Attribute
+    prefLabel: Quality_Attribute
+    altLabel:
+      - Non_Functional_Requirement
+      - NFR
+      - Quality_Requirement
+    definition: >
+      A measurable property of a system that indicates how well it
+      satisfies stakeholder needs beyond functional behavior.
+    scopeNote: >
+      Quality attributes: performance, security, reliability, maintainability,
+      scalability, usability. Architecture is about achieving these.
+    theoreticalBasis:
+      primary: Quality Model
+      source: ISO 25010
+      reference: https://en.wikipedia.org/wiki/ISO/IEC_25010
+    broader: null
+    narrower: null
+    related:
+      - aget:archetype/architect/Architecture
+      - aget:archetype/architect/Trade_off
+    enumValues:
+      - Performance      # Speed, throughput
+      - Security         # Protection
+      - Reliability      # Fault tolerance
+      - Maintainability  # Ease of change
+      - Scalability      # Growth handling
+      - Usability        # Ease of use
+    inScheme: aget:ontology/architect
+    cluster: Architecture Design
+
+  # --------------------------------------------------------------------------
+  # Concept: Pattern
+  # --------------------------------------------------------------------------
+  - id: ARC-006
+    uri: aget:archetype/architect/Pattern
+    prefLabel: Pattern
+    altLabel:
+      - Architecture_Pattern
+      - Design_Pattern
+      - Solution_Pattern
+    definition: >
+      A reusable solution to a commonly occurring problem in architecture.
+      Patterns encode proven approaches.
+    scopeNote: >
+      Patterns have context, problem, solution, and consequences.
+      Selection depends on quality attribute priorities.
+    theoreticalBasis:
+      primary: Design Patterns
+      source: Gang of Four, POSA
+    broader: null
+    narrower: null
+    related:
+      - aget:archetype/architect/Decision
+      - aget:archetype/architect/Architecture
+    example:
+      - "Microservices"
+      - "Event Sourcing"
+      - "CQRS"
+    inScheme: aget:ontology/architect
+    cluster: Architecture Design
+
+  # --------------------------------------------------------------------------
+  # Concept: Interface
+  # --------------------------------------------------------------------------
+  - id: ARC-007
+    uri: aget:archetype/architect/Interface
+    prefLabel: Interface
+    altLabel:
+      - API
+      - Contract
+      - Boundary
+    definition: >
+      The defined point of interaction between components, specifying
+      what services are provided and how to access them.
+    scopeNote: >
+      Interfaces enable loose coupling. Changes to interface affect
+      all consumers; hence stability is important.
+    theoreticalBasis:
+      primary: Interface Design
+      source: Design by Contract
+    broader: null
+    narrower: null
+    related:
+      - aget:archetype/architect/Component
+    inScheme: aget:ontology/architect
+    cluster: Architecture Design
+
+# ============================================================================
+# RELATIONSHIPS
+# ============================================================================
+
+relationships:
+  - subject: aget:archetype/architect/Component
+    predicate: skos:broader
+    object: aget:archetype/architect/Architecture
+    note: Components compose architecture
+
+  - subject: aget:archetype/architect/Decision
+    predicate: skos:related
+    object: aget:archetype/architect/Trade_off
+    note: Decisions involve trade-offs
+
+# ============================================================================
+# METADATA
+# ============================================================================
+
+provenance:
+  project: ARC-001
+  created: 2026-02-14
+  author: private-aget-framework-AGET
+  methodology: Derived from architect archetype ARCHITECT_SPEC.md
+
+validation:
+  conceptCount: 7
+  clusters: 2
+  theoreticalGrounding: 100%
+  skosCompliance: partial
+
+# End of ONTOLOGY_architect.yaml
