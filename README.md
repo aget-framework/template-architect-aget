@@ -16,6 +16,8 @@ The Architect archetype brings **systematic design thinking** to system planning
 
 **For evaluators**: If you need an AI that can reason about system design, evaluate architectural options, and document decisions for posterity, the Architect archetype provides structured design support.
 
+**Domain knowledge that compounds**: Architect agents build persistent understanding of your system landscape — past decisions, quality attribute priorities, and architectural patterns that work in your context. Unlike tools that start fresh each session, your agent accumulates design context that makes each architecture more informed and each trade-off analysis more grounded.
+
 ---
 
 ## Skills
@@ -93,6 +95,7 @@ python3 -m pytest tests/ -v
 | **Trade-offs** | Implicit preferences | Explicit quality attribute evaluation |
 | **Decisions** | Lost in chat | ADRs with context and rationale |
 | **Reversibility** | Assumed | One-way vs. two-way door classification |
+| **Domain memory** | Starts fresh each session | Accumulates architectural expertise over time |
 
 ---
 
