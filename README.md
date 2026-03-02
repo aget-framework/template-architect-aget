@@ -2,7 +2,7 @@
 
 > Design systems and analyze trade-offs with architectural reasoning
 
-**Version**: v3.6.0 | **Archetype**: Architect | **Skills**: 2 specialized + 14 universal
+**Version**: v3.7.0 | **Archetype**: Architect | **Skills**: 2 specialized + 15 universal
 
 ---
 
@@ -103,9 +103,9 @@ python3 -m pytest tests/ -v
 
 | Attribute | Value |
 |-----------|-------|
-| **Framework** | [AGET v3.6.0](https://github.com/aget-framework/aget) |
+| **Framework** | [AGET v3.7.0](https://github.com/aget-framework/aget) |
 | **Archetype** | Architect |
-| **Skills** | 16 total (2 archetype + 14 universal) |
+| **Skills** | 17 total (2 archetype + 15 universal) |
 | **Ontology** | 7 concepts, 3 clusters |
 | **License** | Apache 2.0 |
 
