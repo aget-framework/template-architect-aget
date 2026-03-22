@@ -103,6 +103,7 @@ When facing any substantial change or multi-step task:
 | Create project | /aget-create-project | Starting multi-gate work |
 | Review project | /aget-review-project | Mid-flight assessment |
 | File issue | /aget-file-issue | Reporting bugs or gaps |
+| Enhance spec | /aget-enhance-spec | Improving specification maturity |
 | Check health | /aget-check-health | Verifying agent structure |
 | Design architecture | /aget-design-architecture | Creating or refining system designs |
 | Assess tradeoffs | /aget-assess-tradeoffs | Evaluating competing design concerns |
