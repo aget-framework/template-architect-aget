@@ -86,6 +86,12 @@ When facing any substantial change or multi-step task:
 
 ---
 
+### Governance Capabilities
+
+| Attribute | Value |
+|-----------|-------|
+| Governance Intensity | Rigorous |
+
 ## Purpose
 
 > Design coherent technical architectures that balance competing concerns through systematic trade-off analysis.
