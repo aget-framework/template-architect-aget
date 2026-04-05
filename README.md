@@ -2,7 +2,7 @@
 
 > Design systems and analyze trade-offs with architectural reasoning
 
-**Version**: v3.11.0 | **Archetype**: Architect | **Skills**: 2 specialized + 15 universal
+**Version**: v3.12.0 | **Archetype**: Architect | **Skills**: 2 specialized + 15 universal
 
 ---
 
@@ -115,7 +115,7 @@ Skills are provided by the template. Agents and rules directories are scaffolded
 
 | Attribute | Value |
 |-----------|-------|
-| **Framework** | [AGET v3.11.0](https://github.com/aget-framework/aget) |
+| **Framework** | [AGET v3.12.0](https://github.com/aget-framework/aget) |
 | **Archetype** | Architect |
 | **Skills** | 17 total (2 archetype + 15 universal) |
 | **Ontology** | 7 concepts, 3 clusters |
