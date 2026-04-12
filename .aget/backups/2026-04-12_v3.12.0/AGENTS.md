@@ -1,6 +1,6 @@
 # Agent Configuration
 
-@aget-version: 3.13.0
+@aget-version: 3.12.0
 
 ## Agent Compatibility
 This configuration follows the AGENTS.md open-source standard for universal agent configuration.
@@ -14,7 +14,7 @@ Works with Claude Code, Codex CLI, Gemini CLI, and other CLI coding agents.
 This template creates architect agents focused on system design, technical leadership, and trade-off analysis.
 
 ## Project Context
-template-architect-aget - Architect AGET template - v3.13.0
+template-architect-aget - Architect AGET template - v3.3.0
 
 **Note**: Update this section when instantiating template:
 - Change project name to your architect agent name
