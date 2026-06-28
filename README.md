@@ -2,7 +2,7 @@
 
 > Design systems and analyze trade-offs with architectural reasoning
 
-**Version**: v3.23.1 | **Archetype**: Architect | **Skills**: 2 specialized + 15 universal
+**Version**: v3.24.0 | **Archetype**: Architect | **Skills**: 2 specialized + 15 universal
 
 ---
 
