@@ -15,7 +15,7 @@ Works with Claude Code, Codex CLI, Gemini CLI, and other CLI coding agents.
 This template creates architect agents focused on system design, technical leadership, and trade-off analysis.
 
 ## Project Context
-template-architect-aget - Architect AGET template - v3.13.0
+template-architect-aget - Architect AGET template - v3.36.0
 
 **Note**: Update this section when instantiating template:
 - Change project name to your architect agent name
