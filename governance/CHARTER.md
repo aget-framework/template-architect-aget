@@ -1,7 +1,7 @@
 # Architect Template Charter
 
 **Template**: template-architect-aget
-**Version**: 3.0.0
+**Version**: 3.37.0
 **Date**: 2025-12-27
 
 ---
